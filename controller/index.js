@@ -28,7 +28,6 @@ export const getcryptoCurrencies = async (req, res) => {
             result = { cryptos: res1.data, supportedCurrencies: res2.data };
             caches.getcryptoCurrencies = result;
         }
-        res.headers()
         res.status(200).json(result);
 
     } catch (error) {
