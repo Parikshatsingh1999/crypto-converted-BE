@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-    origin: 'https://crypto-converter-fe.vercel.app'
+    origin: ['https://crypto-converter-fe.vercel.app', 'http://localhost:3000']
 }));
 
 const PORT = process.env.PORT || 5000;
