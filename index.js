@@ -14,7 +14,9 @@ const PORT = process.env.PORT || 5000;
 app.use(bodyParser.json())
 
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(cors())
+app.use(cors({
+    origin: ['https://crypto-converter-fe.vercel.app']
+}))
 
 
 app.use("/api", router)
