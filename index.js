@@ -8,9 +8,11 @@ import { router } from "./router/index.js";
 dotenv.config();
 
 const app = express();
-console.log('Before CORS middleware');
-app.use(cors());
-console.log('After CORS middleware');
+
+app.use(cors({
+    origin: 'https://crypto-converter-fe.vercel.app'
+}));
+
 const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json())

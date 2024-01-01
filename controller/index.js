@@ -7,11 +7,6 @@ const caches = {}
 export const getcryptoCurrencies = async (req, res) => {
     let result = null;
     try {
-        res.set({
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': 'https://crypto-converter-fe.vercel.app',
-            // Add more headers as needed
-        });
         // caching is done, as the api calls that can be made are limited
         if (caches.getcryptoCurrencies) result = caches.getcryptoCurrencies;
         if (!result) {
